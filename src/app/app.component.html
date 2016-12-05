@@ -1,0 +1,37 @@
+<div class="container">
+
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation"><a routerLink="home" routerLinkActive="active">{{ 'HomeLink' | translate }}</a></li>
+                <li role="presentation"><a routerLink="about" routerLinkActive="active">{{ 'AboutLink' | translate }}</a></li>
+                <li role="presentation"><a routerLink="contact" routerLinkActive="active">{{ 'ContactLink' | translate }}</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ 'Sel_lang' | translate }}<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a (click)="changeLanguage('en')">{{ 'Languages.English' | translate }}</a>
+                        </li>
+                        <li>
+                            <a (click)="changeLanguage('fr')">{{ 'Languages.French' | translate }}</a>
+                        </li>
+                        <li>
+                            <a (click)="changeLanguage('cn')">{{ 'Languages.Chinese' | translate }}</a>
+                        </li>
+                        <li>
+                            <a (click)="changeLanguage('hi')">{{ 'Languages.Hindi' | translate }}</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">{{ 'Title' | translate }}</h3>
+    </div>
+
+    <router-outlet></router-outlet>
+    
+    <footer class="footer">
+        <p>&copy; 2016 MyCompany, Inc.</p>
+    </footer>
+
+</div> 
